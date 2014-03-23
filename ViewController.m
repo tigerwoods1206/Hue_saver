@@ -10,8 +10,8 @@
 
 @interface ViewController ()
 {
-    AVFound_rapper *sabON;
-    AVFound_rapper *swing;
+   // AVFound_rapper *sabON;
+   // AVFound_rapper *swing;
 }
 
 @end
@@ -23,8 +23,8 @@
 {
     //TEST
     [super viewDidLoad];
-     sabON = [[AVFound_rapper alloc] initWithFile:@"SaberOn.wav"];
-     swing = [[AVFound_rapper alloc] initWithFile:@"Swing02.WAV"];
+    // sabON = [[AVFound_rapper alloc] initWithFile:@"SaberOn.wav"];
+    // swing = [[AVFound_rapper alloc] initWithFile:@"Swing02.WAV"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -38,14 +38,17 @@
 -(IBAction)sound_ON:(id)sender
 {
     //AVFound_rapper *rapav = [[AVFound_rapper alloc] initWithFile:@"SaberOn.wav"];
-    [sabON sound_ON];
+   // [sabON sound_ON];
+    
+    [[SEManager sharedManager] playSound:@"SaberOn.wav"];
 }
 
 -(IBAction)fight_saver:(id)sender
 {
      //[saver_swing play];
    // AVFound_rapper *rapav = [[AVFound_rapper alloc] initWithFile:@"Swing02.WAV"];
-    [swing sound_ON];
+   // [swing sound_ON];
+      [[SEManager sharedManager] playSound:@"Swing02.WAV"];
    
 }
 

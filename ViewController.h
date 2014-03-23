@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AVFound_rapper.h"
+//#import "AVFound_rapper.h"
+#import "SEManager.h"
 
 @interface ViewController : UIViewController
 {
