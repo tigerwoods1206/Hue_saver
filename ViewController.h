@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
+#import "AVFound_rapper.h"
 
 @interface ViewController : UIViewController
 {
-    AVAudioPlayer *audioPlayer;
+    
 }
-
-- (AVAudioPlayer*)getAVAudioPlayer:(NSString*)soudFileName;
 
 -(IBAction)sound_ON:(id)sender;
 -(IBAction)fight_saver:(id)sender;
