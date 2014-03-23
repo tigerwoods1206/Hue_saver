@@ -45,6 +45,7 @@ static SEManager *sharedData_ = nil;
     [player play];
 }
 
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
     [soundArray removeObject:player];
 }

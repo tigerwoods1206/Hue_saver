@@ -35,6 +35,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+// シェイク開始
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)  {
+        NSLog(@"Motion began");
+        [[SEManager sharedManager] playSound:@"Swing02.WAV"];
+    }
+}
+
+// シェイク完了
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake) {
+        NSLog(@"Motion ended");
+    }
+}
+
 -(IBAction)sound_ON:(id)sender
 {
     //AVFound_rapper *rapav = [[AVFound_rapper alloc] initWithFile:@"SaberOn.wav"];
